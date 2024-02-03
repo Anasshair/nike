@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            height: 100vh;
+            background-image: url("./image/bg1.png");
+            background-size: cover;
+            background-position: center 80%;
+            padding: 40px;
+        }
+
+        .header {
+            color: #c72092;
+            font-size: 2.3em;
+        }
+
+        
+
+        .logo-header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding-top: 12px;
+            justify-content: space-around;
+            box-shadow: rgba(0, x 0, 0, 0.24) 0px 3px 8px;
+        }
+.comp{
+    display: flex; 
+    justify-content: space-between;
+}
+        .img-shoes {
+transform: rotate(5deg);
+margin-right: 20px;
+width: 50%;
+overflow: hidden
+        }
+        .img-shoes>img{
+height: 100%;
+width: 100%;
+        }
+        .social-icon{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 5px;
+            gap: 20px;
+            top: 40%;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        .heading {
+            font-size: 80px;
+            text-align: center;
+            font-weight: 800;
+            z-index: 999;
+            background: linear-gradient(to left, #c72092, #6c14d0);
+            color: transparent;  
+            background-clip: text;
+            position: relative;
+        }
+
+        .box>div>img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .box {
+            width: 250px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: rgba(16, 16, 242, 0.25) 0px 30px 60px -12px inset, rgba(86, 24, 148, 0.5) 0px 18px 36px -18px inset;
+            position: relative;
+        } 
+        .about {
+            color: #6c14d0;
+            font-size: 80px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 50px;
+        }
+
+        .img-container {
+            border: 3px solid #6c14d0;
+            border-radius: 8px;
+
+        }
+
+        .costomer-container>h1 {
+            font-size: 80px;
+            font-weight: 900;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .services>h1 {
+            text-align: center;
+            font-size: 80px;
+            color: #6c14d0;
+            margin: 20px 0;
+        }
+
+        .user {
+            border: 2px solid #6c14d0;
+
+            display: flex;
+            margin: 0px 0 20px 0;
+            height: 35px;
+            width: 350px;
+            border-radius: 4px;
+        }
+
+        .user>i {
+            margin: 8px;
+            color: #6c14d0;
+        }
+
+        .user>input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+        }
+
+        .f-ions {
+            border: none;
+            display: flex;
+            padding: 4px;
+            height: 30px;
+            width: 30px;
+            padding-left: 120px;
+        }
+
+        .contect {
+            font-size: 20px;
+            color: #6c14d6;
+        }
+
+        .help>h1 {
+            font-size: 40px;
+            color: #6c14d6;
+        }
+
+        .help {
+            line-height: 30px;
+        }
+
+        .OurStory>h1 {
+            font-size: 40px;
+            color: #6c14d6;
+        }
+
+        .OurStory {
+            line-height: 30px;
+        }
+
+        .follow>h1 {
+            font-size: 40px;
+            color: #6c14d6;
+        }
+
+        .follow>i {
+            gap: 50px;
+        }
+
+        .Newletter>h1 {
+            font-size: 40px;
+            color: #6c14d6;
+        }
+
+        .footer>div>div>input {
+            border-radius: 8px;
+            background: linear-gradient(to left, #c72092, #6c14d0);
+            padding: 4px;
+            display: block;
+            margin: auto;
+            margin-top: 8px;
+        }
+
+        .header-icon {
+            font-size: 22px;
+            display: flex;
+            gap: 22px;
+        }
+
+        .header-icon>i {
+            transition: .5s;
+        }
+
+        .header-icon>i:hover {
+            color: #6c14d6;
+        }
+
+        .button-icon {
+            color: wheat;
+            font-size: 16px;
+            padding: 5px 15px; border-radius: 20px; 
+            background: linear-gradient(to left, #c72092, #6c14d0);
+            font-size: 13px; color: antiquewhite; border: none;
+        }
+        .button-icon > i{
+            transition: .4s;
+        }
+        .button-icon:hover > i {
+            transform: translateX(8px);
+        }
+        .box img{
+            transition: 0.5s;
+        }
+        .box img:hover {
+            transform: scale(1.2);
+        }
+
+        .button-tag{
+            color: aliceblue;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 3px;
+            margin: 6px 0;
+            padding: 4px;
+            background-color: #c72092;
+        }
+        .social-icon>i:hover {
+            color: #6c14d6;
+        }
+        .icons-shear{
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0;
+            transition: 0.4s;
+        }
+        .icons-shear > i{
+        display: block;
+        border: 1px solid #6c14d0; 
+        padding: 10px;
+        border-radius: 3px;
+        margin-top: 6px;
+
+        }
+        .box:hover > .icons-shear{
+            opacity: 1;
+            transform: translateX(20px);
+        }
+
+
+        .box:hover > div > img {
+            transform: scale(1.2);
+            /* background-color: red; */
+        } 
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <div class="header">
+                <p>SHEOS</p>
+            </div>
+            <div
+                style="display: flex;  width: clamp(320px, 100%, 420px); justify-content: space-between;font-size: 13px;">
+                <p>HOME</p>
+                <p>PRODUCT</p>
+                <p>ABOUT</p>
+                <p>REVIEW</p>
+                <p>SERVISES</p>
+            </div>
+            <div class="header-icon">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+
+        <div class="comp">
+            <div style="font-size: 70px;color:#c72092;">
+                <p>Nike <br>Collection</p>
+                <p style="font-size: 16px; color:#333; padding-bottom: 190px;">Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. <br>Culpa omnis eveniet, animi itaque doloribus<br> error officia tempore saepe
+                    consectetur ut, veniam nihil. Dolore<br>quidem consequatur quisquam id officiis ea doloremque?</p>
+                <button class="button-icon">SHOP NOW <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="img-shoes">
+                <img src="./image/shoes.png"/>
+            </div>
+        </div>
+    <div class="social-icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+    </div>
+
+    <div class="heading">
+        <h1>Products</h1>
+    </div>
+    <section>
+        <div style="display: flex; gap: 20px; padding-top: 40px; padding-left: 10px; flex-wrap: wrap; justify-content: center;">
+           
+            <div class="box">
+                <div> 
+                    <img src="./image/shoes1.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div>
+                     <img src="./image/shoes2.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes3.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes4.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes5.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes6.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes7.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+
+            <div class="box">
+                <div> <img src="./image/shoes8.png" />
+                    <h1>NIKE</h1>
+                    <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+                    <p>$100.99</p>
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="button-tag">Add To Cart</button>
+                </div>
+                <div class="icons-shear">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-share"></i>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="about">
+        <h1>About</h1>
+    </div>
+    <section>
+        <div style="display: flex; padding: 20px 50px; gap: 30px;">
+            <div style="width:50%; display: flex;">
+                <div style="width:25%;"> <img src="./image/red_shoes1.png" style="height: 110px; width: 100px; ">
+                    <img src="./image/red_shoes2.png" style="height: 110px; width: 100px;">
+                    <img src="./image/red_shoes3.png" style="height: 110px; width: 100px;">
+                    <img src="./image/red_shoes4.png" style="height: 110px; width: 100px;">
+                </div>
+                <div style="width:75%;">
+                    <img src="./image/red_shoes2.png"
+                        style="height: 100%; width: 100%;object-fit: contain;  border: 3px solid #6c14d0;">
+                </div>
+
+            </div>
+            <div style="width:50%;  border: 3px solid #6c14d0;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed fugiat nesciunt assumenda modi
+                    quas explicabo molestiae earum. Quaerat velit, nisi numquam dolorum nemo nobis aut repudiandae
+                    debitis quidem ut!
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="costomer-container">
+        <h1>CUSTOMER'S REVIEW</h1>
+    </div>
+    <section>
+
+        <div
+            style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-evenly; font-size: 14px; line-height: 25px;">
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/gir_dp2.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/man_dp3.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/man_dp3.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/man_dp2.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/man_dp1.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+            <div style="width: 360px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="height: 65px; width: 65px; overflow: hidden; border-radius: 50%;">
+                        <img src="./image/gir_dp3.jpg" style="width: 100%; width: 100%;">
+                    </div>
+                    <div>
+                        <p>Ranidi Lochana</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa
+                    repellat numquam atque dolores!</p>
+            </div>
+    </section>
+    <section>
+        <div class="services">
+            <h1>Our Services</h1>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 50px;">
+            <div>
+                <i class="fa-solid fa-truck-fast" style="font-size: 80px; color: orange;"></i>
+                <p>Fast Delivery</p>
+                <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-rotate-right" style="font-size: 80px; color: orange;"></i>
+                <p>Fast Delivery</p>
+                <p>Lorem ipsum dolor sit, amet<br> consectetur adipisicing elit.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-headset" style="font-size: 80px; color: orange;"></i>
+                <p>Fast Delivery</p>
+                <p>Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex;  background-image:url('./image/loging_bg.png'); background-size: cover;">
+            <div style="width: 50%; height: 100vh;">
+                <img src="./image/logshoes.png" style=" width: 90%; height: 90%;">
+            </div>
+            <div style="padding-left: 230px; padding-top: 100px;">
+                <h1 style="font-size: 40px;">Welcome Back!</h1>
+                <form action="#">
+                    <label>Enter User Name</label>
+                    <div class="user">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Enter User Name" style="background-color: transparent;">
+                    </div>
+                    <label>Enter Password</label>
+                    <div class="user">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter Password" style="background-color: transparent;">
+                    </div>
+                    <p>Forget Password ?</p>
+                    <button style="width: 100%; height: 35px; background: linear-gradient(to left, #c72092, #6c14d0);
+                color: rgb(250, 250, 250); font-size: 16px; font-weight: 500; border: none;">
+                        Submit
+                    </button>
+                    <div class="f-ions">
+                        <img src="./image/google.png" style="height: 30px; width: 30px; margin-top: 60px;">
+                        <img src="./image/facebook.png" style="height: 30px; width: 30px; margin-top: 60px;">
+                        <img src="./image/twitter.png" style="height: 30px; width: 30px; margin-top: 60px;">
+                    </div>
+                </form>
+            </di>
+        </div>
+
+        </div>
+    </section>
+    <footer>
+        <div style="display: flex; justify-content: space-around;">
+            <div>
+                <div class="contect">
+                    <h1>Contect US</h1>
+                    <div style="margin: 8px 0px; font-size: 12px; color:black; line-height: 20px;">
+                        <p><i class="fa-solid fa-house"> Mandi Bahaudin</i></p>
+                        <p><i class="fa-solid fa-phone"> 03217747689</i></p>
+                        <p> <i class="fa-solid fa-envelope"> Ahamdnoor9192@Gmail.com</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="help">
+                <h1>Help</h1>
+                <p>FAQ</p>
+                <p>Shipping</p>
+                <p>Replacement</p>
+                <p>Payemt</p>
+            </div>
+            <div class="OurStory">
+                <h1>Our Story</h1>
+                <p>Lahore</p>
+                <p>Krachi</p>
+                <p>Multan</p>
+                <p>Islamabad</p>
+            </div>
+            <div class="follow">
+                <h1>Follow US</h1>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="Newletter">
+                <h1>News Letter</h1>
+                <input type="text">
+                <button style=" border-radius: 8px; background: linear-gradient(to left, #c72092, #6c14d0);
+                   padding: 4px;
+                   flex-wrap: wrap;
+                   margin-top: 8px;">Submit</button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
